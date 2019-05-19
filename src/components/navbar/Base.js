@@ -37,15 +37,20 @@ const Base = (url) => {
         </ul>
       <div>
       <hr />
+      <Switch>
       <Route path='/' exact component={Home} />
       <Route path='/profile' component={Profile} />
       <Route path='/menu'exact component={Menu} />
       <Route path='/menu/makanan' component={Makanan} />
       <Route path='/menu/minuman' component={Minuman} />
+      <Route exact component={GakAda} />
+      </Switch>
 
       </div>
       </Router>
     )
 }
+
+const GakAda = ()=> <div>404 bray...</div>
 
 export default Base
